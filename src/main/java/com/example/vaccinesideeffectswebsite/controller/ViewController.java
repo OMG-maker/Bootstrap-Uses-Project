@@ -10,7 +10,6 @@ public class ViewController {
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
 
-
     @RequestMapping({"/index"})
     public String main() {
         System.out.println("인덱스");
@@ -19,7 +18,13 @@ public class ViewController {
 
     @RequestMapping({"/login"})
     public String login() {
-        System.out.println("인덱스");
-        return "index";
+        System.out.println("login");
+        return "login";
+    }
+
+    @RequestMapping({"/register"})
+    public String register() {
+        System.out.println("register");
+        return "register";
     }
 }
