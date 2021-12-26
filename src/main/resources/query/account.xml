@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.vaccinesideeffectswebsite.mapper.AccountMapper">
+
+    <select id="findAccount" parameterType="HashMap" resultType="HashMap">
+        SELECT email,
+               password,
+               first_name,
+               last_name
+        FROM users
+        WHERE 1=1
+         <if test='userEmail != null and userPassword != null'>
+            and email = #{userEmail}
+            and password = #{userPassword}
+        </if>
+    </select>
+
+    <insert id="insertAccount" parameterType="HashMap">
+        INSERT INTO users (
+            email,
+            password,
+            first_name,
+            last_name
+        ) VALUES (
+            #{userEmail},
+            #{userPassword},
+            #{firstName},
+            #{lastName}
+        )
+    </insert>
+
+</mapper>
