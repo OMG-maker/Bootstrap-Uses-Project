@@ -12,19 +12,16 @@ public class ViewController {
 
     @RequestMapping({"/index"})
     public String main() {
-        System.out.println("인덱스");
         return "index";
     }
 
     @RequestMapping({"/login"})
     public String login() {
-        System.out.println("login");
         return "login";
     }
 
     @RequestMapping({"/register"})
     public String register() {
-        System.out.println("register");
         return "register";
     }
 }

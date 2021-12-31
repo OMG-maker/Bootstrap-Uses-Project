@@ -127,6 +127,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
+                    <fork>false</fork>
                     <classifier>${repackage.classifier}</classifier>
                     <image>
                         <builder>paketobuildpacks/builder:tiny</builder>
