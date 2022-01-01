@@ -37,8 +37,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
                 .addResourceLocations(new String[]{"classpath:/static/xml/"})
                 .setCachePeriod(Integer.valueOf(20));
 
-
-
         registry.addResourceHandler(new String[]{"/demo/**"})
                 .addResourceLocations(new String[]{"classpath:/static/demo/"})
                 .setCachePeriod(Integer.valueOf(20));

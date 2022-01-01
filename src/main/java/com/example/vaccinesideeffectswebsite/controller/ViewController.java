@@ -15,6 +15,11 @@ public class ViewController {
         return "index";
     }
 
+    @RequestMapping({"/index2"})
+    public String index2() {
+        return "index2";
+    }
+
     @RequestMapping({"/login"})
     public String login() {
         return "login";
@@ -23,5 +28,10 @@ public class ViewController {
     @RequestMapping({"/register"})
     public String register() {
         return "register";
+    }
+
+    @RequestMapping({"/layout"})
+    public String layout() {
+        return "layout/default_layout";
     }
 }
