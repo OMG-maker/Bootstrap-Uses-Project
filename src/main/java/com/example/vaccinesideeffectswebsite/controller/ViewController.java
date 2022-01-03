@@ -32,6 +32,6 @@ public class ViewController {
 
     @RequestMapping({"/layout"})
     public String layout() {
-        return "layout/default_layout";
+        return "layout/defaultLayout";
     }
 }
