@@ -20,6 +20,7 @@ public class ViewController {
         return "index2";
     }
 
+
     @RequestMapping({"/login"})
     public String login() {
         return "login";
