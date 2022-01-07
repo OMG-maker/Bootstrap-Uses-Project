@@ -25,7 +25,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		
+		//httpSecurity.httpBasic().disable();  // 기존 SecurityConfig 에서 사용하던 강제 login 무효화
 		http.csrf().disable();
 		http.authorizeRequests()
 			.antMatchers("/user/**").authenticated()
