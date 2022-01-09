@@ -3,15 +3,19 @@ $(function () {
 
 });
 
-let email = $("#exampleInputEmail");
+// let email = $("#exampleInputEmail");
+let name = $("#exampleInputEmail");
 let password = $("#exampleInputPassword");
 
 function fLogin() {
     $.ajax({
-        url: "/account/login",
+        // url: "/account/login",
+        url: "/loginProc",
         data: {
-            userEmail: email.val(),
-            userPassword: password.val()
+            // userEmail: email.val(),
+            username: name.val(),
+            // userPassword: password.val()
+            password: password.val()
         },
         success: function (result) {
             if (result.data == null) {

@@ -28,7 +28,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		//httpSecurity.httpBasic().disable();  // 기존 SecurityConfig 에서 사용하던 강제 login 무효화
 		http.csrf().disable();
 		http.authorizeRequests()
-			.antMatchers("/user/**").authenticated()
+			.antMatchers("/user/**").authenticated() // 인증만 되면 들어갈 수 있는 주소
 			//.antMatchers("/admin/**").access("hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')")
 			//.antMatchers("/admin/**").access("hasRole('ROLE_ADMIN') and hasRole('ROLE_USER')")
 			.antMatchers("/admin/**").access("hasRole('ROLE_ADMIN')")
@@ -36,8 +36,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		.and()
 			.formLogin()
 			.loginPage("/login")
-			.loginProcessingUrl("/loginProc")
-			.defaultSuccessUrl("/")
+//				.usernameParameter("username2") // 해당 코드를 사용하면 PrincipalDetailsService 에서 username 이 아닌 username2 를 사용해야한다.
+			.loginProcessingUrl("/loginProc") // loginProc 주소가 호출이 되면 시큐리틱 낚아채서 대신 로그인을 진행함
+			.defaultSuccessUrl("/") // 실험용
+//			.defaultSuccessUrl("/index") // 성공했을때 이동하는 페이지
+
 		.and()
 			.oauth2Login()
 			.loginPage("/login")
@@ -45,8 +48,3 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 			.userService(principalOauth2UserService);
 	}
 }
-
-
-
-
-
