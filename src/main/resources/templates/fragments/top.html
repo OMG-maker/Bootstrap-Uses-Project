@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security5">
+<!--      xmlns="http://www.w3.org/1999/xhtml"-->
 
 <th:block th:fragment="topbarFragment">
 
@@ -28,7 +31,6 @@
 
         <!--    로그인과 비로그인시 달라져야 할 곳    -->
         <ul class="navbar-nav ml-auto">
-
             <!-- Nav Item - Search Dropdown (Visible Only XS) -->
             <li class="nav-item dropdown no-arrow d-sm-none">
                 <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
@@ -54,7 +56,7 @@
             </li>
 
             <!-- Nav Item - Alerts -->
-            <li class="nav-item dropdown no-arrow mx-1">
+            <li sec:authorize="isAuthenticated()" class="nav-item dropdown no-arrow mx-1">
                 <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-bell fa-fw"></i>
@@ -105,7 +107,7 @@
             </li>
 
             <!-- Nav Item - Messages -->
-            <li class="nav-item dropdown no-arrow mx-1">
+            <li sec:authorize="isAuthenticated()" class="nav-item dropdown no-arrow mx-1">
                 <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-envelope fa-fw"></i>
@@ -173,7 +175,7 @@
             <div class="topbar-divider d-none d-sm-block"></div>
 
             <!-- Nav Item - User Information -->
-            <li class="nav-item dropdown no-arrow">
+            <li sec:authorize="isAuthenticated()" class="nav-item dropdown no-arrow">
                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
@@ -201,6 +203,13 @@
                         Logout
                     </a>
                 </div>
+            </li>
+
+            <li sec:authorize="isAnonymous()" class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle" href="#" role="button"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">Please Login!</span>
+                </a>
             </li>
 
         </ul>
