@@ -28,6 +28,8 @@ public class User {
 	private String userFirstName;
 	private String userSecondName;
 
+	private boolean checkbox;
+
 	private String password;
 	private String email;
 	private String role; //ROLE_USER, ROLE_ADMIN

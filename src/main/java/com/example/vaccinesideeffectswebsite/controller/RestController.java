@@ -5,12 +5,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-
-@RequestMapping({"/account"})
+@RequestMapping({"/"})
 @org.springframework.web.bind.annotation.RestController
 public class RestController {
 
@@ -19,15 +15,15 @@ public class RestController {
     @Autowired
     private AccountService accountService;
 
-    @RequestMapping({"/logout"})
-    public ModelAndView logOut(HttpServletRequest request) throws Exception {
-        logger.info("logoutMainGET 메서드 진입");
-
-        HttpSession session = request.getSession();
-        session.invalidate();
-        ModelAndView mv = new ModelAndView("/login");
-        return mv;
-    }
+//    @RequestMapping({"/logout"})
+//    public ModelAndView logOut(HttpServletRequest request) throws Exception {
+//        logger.info("logoutMainGET 메서드 진입");
+//
+//        HttpSession session = request.getSession();
+//        session.invalidate();
+//        ModelAndView mv = new ModelAndView("/login");
+//        return mv;
+//    }
 
 //    @RequestMapping({"/login"})
 //    public JSONObject login(@RequestParam("userEmail") String userEmail,

@@ -10,13 +10,14 @@ import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.Iterator;
 
 @Controller
-public class IndexController {
+public class AccountIndexController {
 
 	@Autowired
 	private UserRepository userRepository;
@@ -29,6 +30,16 @@ public class IndexController {
 		return "it's index page.";
 	}
 
+	@GetMapping("/login")
+	public String login() {
+		return "login";
+	}
+
+	@GetMapping("/join")
+	public String join() {
+		return "join";
+	}
+
 	@GetMapping("/user")
 	public @ResponseBody String user(@AuthenticationPrincipal PrincipalDetails principal) {
 		System.out.println("Principal : " + principal);
@@ -39,7 +50,6 @@ public class IndexController {
 			GrantedAuthority auth = iter.next();
 			System.out.println(auth.getAuthority());
 		}
-
 		return "유저 페이지입니다.";
 	}
 
@@ -56,18 +66,8 @@ public class IndexController {
 		return "매니저 페이지입니다.";
 	}
 
-	@GetMapping("/login")
-	public String login() {
-		return "login";
-	}
-
-	@GetMapping("/join")
-	public String join() {
-		return "join";
-	}
-
-	@PostMapping("/joinProc")
-	public void joinProc(User user) {
+	@RequestMapping(value="/joinProc", method= RequestMethod.POST)
+	public String joinProc(User user) {
 		System.out.println("회원가입 진행 : " + user);
 		String rawPassword = user.getPassword();
 		String encPassword = bCryptPasswordEncoder.encode(rawPassword);
@@ -77,7 +77,7 @@ public class IndexController {
 		user.setPassword(encPassword);
 		user.setRole("ROLE_USER");
 		userRepository.save(user);
+
+		return "redirect:/login";
 	}
 }
-
-// test after merge

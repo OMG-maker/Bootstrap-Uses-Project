@@ -18,7 +18,8 @@ function fRegister() {
                 password: password.val(),
                 userFirstName: fistName.val(),
                 userSecondName: lastName.val()
-            },
+            }
+            ,
             success: function (result) {
                 alert('회원가입이 완료되었습니다.');
                 location.href = "/login";
@@ -43,7 +44,6 @@ function fRegister() {
             // }
         });
     }
-    return false;
 }
 
 // let email = $("#exampleInputEmail");
