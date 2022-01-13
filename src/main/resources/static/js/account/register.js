@@ -21,8 +21,8 @@ function fRegister() {
             }
             ,
             success: function (result) {
-                alert('회원가입이 완료되었습니다.');
-                location.href = "/login";
+                //alert('회원가입이 완료되었습니다.');
+                // location.href = "/login";
             }
             // ,
             // success: function (result) {

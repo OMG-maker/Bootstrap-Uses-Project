@@ -18,10 +18,9 @@
 
     <properties>
         <java.version>11</java.version>
-<!--        <repackage.classifier/>-->
-<!--        <spring-native.version>0.11.0</spring-native.version>-->
+        <!--        <repackage.classifier/>-->
+        <!--        <spring-native.version>0.11.0</spring-native.version>-->
     </properties>
-
 
 
     <dependencies>
@@ -56,16 +55,16 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.experimental</groupId>-->
-<!--            <artifactId>spring-native</artifactId>-->
-<!--            <version>${spring-native.version}</version>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.security</groupId>-->
-<!--            <artifactId>spring-security-test</artifactId>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.experimental</groupId>-->
+        <!--            <artifactId>spring-native</artifactId>-->
+        <!--            <version>${spring-native.version}</version>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.security</groupId>-->
+        <!--            <artifactId>spring-security-test</artifactId>-->
+        <!--            <scope>test</scope>-->
+        <!--        </dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -92,16 +91,16 @@
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>org.mybatis</groupId>-->
-<!--            <artifactId>mybatis</artifactId>-->
-<!--            <version>3.4.6</version>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>org.mybatis</groupId>-->
-<!--            <artifactId>mybatis-spring</artifactId>-->
-<!--            <version>1.3.2</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.mybatis</groupId>-->
+        <!--            <artifactId>mybatis</artifactId>-->
+        <!--            <version>3.4.6</version>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.mybatis</groupId>-->
+        <!--            <artifactId>mybatis-spring</artifactId>-->
+        <!--            <version>1.3.2</version>-->
+        <!--        </dependency>-->
 
         <dependency>
             <groupId>com.googlecode.json-simple</groupId>
@@ -137,12 +136,12 @@
         </dependency>
 
 
-<!--여기까지 동일-->
+        <!--여기까지 동일-->
 
         <dependency>
             <groupId>org.junit.platform</groupId>
             <artifactId>junit-platform-launcher</artifactId>
-<!--            <scope>test</scope>-->
+            <!--            <scope>test</scope>-->
         </dependency>
 
         <dependency>
@@ -198,7 +197,7 @@
         <dependency>
             <groupId>io.projectreactor</groupId>
             <artifactId>reactor-test</artifactId>
-<!--            <scope>test</scope>-->
+            <!--            <scope>test</scope>-->
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
@@ -207,105 +206,124 @@
         </dependency>
     </dependencies>
 
-<!--    <build>-->
-<!--        <plugins>-->
-<!--            <plugin>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
-<!--&lt;!&ndash;                <version>2.4.2</version>&ndash;&gt;-->
-<!--                <configuration>-->
-<!--&lt;!&ndash;                    <excludeDevtools>false</excludeDevtools>&ndash;&gt;-->
-<!--&lt;!&ndash;                    <classifier>${repackage.classifier}</classifier>&ndash;&gt;-->
-<!--&lt;!&ndash;                    <image>&ndash;&gt;-->
-<!--&lt;!&ndash;                        <builder>paketobuildpacks/builder:tiny</builder>&ndash;&gt;-->
-<!--&lt;!&ndash;                        <env>&ndash;&gt;-->
-<!--&lt;!&ndash;                            <BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>&ndash;&gt;-->
-<!--&lt;!&ndash;                        </env>&ndash;&gt;-->
-<!--&lt;!&ndash;                    </image>&ndash;&gt;-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-<!--&lt;!&ndash;            <plugin>&ndash;&gt;-->
-<!--&lt;!&ndash;                <groupId>org.springframework.experimental</groupId>&ndash;&gt;-->
-<!--&lt;!&ndash;                <artifactId>spring-aot-maven-plugin</artifactId>&ndash;&gt;-->
-<!--&lt;!&ndash;                <version>${spring-native.version}</version>&ndash;&gt;-->
-<!--&lt;!&ndash;                <executions>&ndash;&gt;-->
-<!--&lt;!&ndash;                    <execution>&ndash;&gt;-->
-<!--&lt;!&ndash;                        <id>test-generate</id>&ndash;&gt;-->
-<!--&lt;!&ndash;                        <goals>&ndash;&gt;-->
-<!--&lt;!&ndash;                            <goal>test-generate</goal>&ndash;&gt;-->
-<!--&lt;!&ndash;                        </goals>&ndash;&gt;-->
-<!--&lt;!&ndash;                    </execution>&ndash;&gt;-->
-<!--&lt;!&ndash;                    <execution>&ndash;&gt;-->
-<!--&lt;!&ndash;                        <id>generate</id>&ndash;&gt;-->
-<!--&lt;!&ndash;                        <goals>&ndash;&gt;-->
-<!--&lt;!&ndash;                            <goal>generate</goal>&ndash;&gt;-->
-<!--&lt;!&ndash;                        </goals>&ndash;&gt;-->
-<!--&lt;!&ndash;                    </execution>&ndash;&gt;-->
-<!--&lt;!&ndash;                </executions>&ndash;&gt;-->
-<!--&lt;!&ndash;            </plugin>&ndash;&gt;-->
-<!--        </plugins>-->
-<!--    </build>-->
-<!--    <repositories>-->
-<!--        <repository>-->
-<!--            <id>spring-releases</id>-->
-<!--            <name>Spring Releases</name>-->
-<!--            <url>https://repo.spring.io/release</url>-->
-<!--            <snapshots>-->
-<!--                <enabled>false</enabled>-->
-<!--            </snapshots>-->
-<!--        </repository>-->
-<!--    </repositories>-->
-<!--    <pluginRepositories>-->
-<!--        <pluginRepository>-->
-<!--            <id>spring-releases</id>-->
-<!--            <name>Spring Releases</name>-->
-<!--            <url>https://repo.spring.io/release</url>-->
-<!--            <snapshots>-->
-<!--                <enabled>false</enabled>-->
-<!--            </snapshots>-->
-<!--        </pluginRepository>-->
-<!--    </pluginRepositories>-->
-<!--    <profiles>-->
-<!--        <profile>-->
-<!--            <id>native</id>-->
-<!--            <properties>-->
-<!--                <repackage.classifier>exec</repackage.classifier>-->
-<!--                <native-buildtools.version>0.9.8</native-buildtools.version>-->
-<!--            </properties>-->
-<!--            <dependencies>-->
-<!--                <dependency>-->
-<!--                    <groupId>org.junit.platform</groupId>-->
-<!--                    <artifactId>junit-platform-launcher</artifactId>-->
-<!--                    <scope>test</scope>-->
-<!--                </dependency>-->
-<!--            </dependencies>-->
-<!--            <build>-->
-<!--                <plugins>-->
-<!--&lt;!&ndash;                    <plugin>&ndash;&gt;-->
-<!--&lt;!&ndash;                        <groupId>org.graalvm.buildtools</groupId>&ndash;&gt;-->
-<!--&lt;!&ndash;                        <artifactId>native-maven-plugin</artifactId>&ndash;&gt;-->
-<!--&lt;!&ndash;                        <version>${native-buildtools.version}</version>&ndash;&gt;-->
-<!--&lt;!&ndash;                        <extensions>true</extensions>&ndash;&gt;-->
-<!--&lt;!&ndash;                        <executions>&ndash;&gt;-->
-<!--&lt;!&ndash;                            <execution>&ndash;&gt;-->
-<!--&lt;!&ndash;                                <id>test-native</id>&ndash;&gt;-->
-<!--&lt;!&ndash;                                <phase>test</phase>&ndash;&gt;-->
-<!--&lt;!&ndash;                                <goals>&ndash;&gt;-->
-<!--&lt;!&ndash;                                    <goal>test</goal>&ndash;&gt;-->
-<!--&lt;!&ndash;                                </goals>&ndash;&gt;-->
-<!--&lt;!&ndash;                            </execution>&ndash;&gt;-->
-<!--&lt;!&ndash;                            <execution>&ndash;&gt;-->
-<!--&lt;!&ndash;                                <id>build-native</id>&ndash;&gt;-->
-<!--&lt;!&ndash;                                <phase>package</phase>&ndash;&gt;-->
-<!--&lt;!&ndash;                                <goals>&ndash;&gt;-->
-<!--&lt;!&ndash;                                    <goal>build</goal>&ndash;&gt;-->
-<!--&lt;!&ndash;                                </goals>&ndash;&gt;-->
-<!--&lt;!&ndash;                            </execution>&ndash;&gt;-->
-<!--&lt;!&ndash;                        </executions>&ndash;&gt;-->
-<!--&lt;!&ndash;                    </plugin>&ndash;&gt;-->
-<!--                </plugins>-->
-<!--            </build>-->
-<!--        </profile>-->
-<!--    </profiles>-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <addResources>true</addResources>
+                    <executable>true</executable>
+                    <fork>false
+                    </fork> <!-- Enable the line below to have remote debugging of your application on port 5005 -->
+                    <jvmArguments>-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005</jvmArguments>
+                    <arguments>
+                        <argument>spring.profiles.active=dev</argument>
+                    </arguments>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <!--    <build>-->
+    <!--        <plugins>-->
+    <!--            <plugin>-->
+    <!--                <groupId>org.springframework.boot</groupId>-->
+    <!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+    <!--&lt;!&ndash;                <version>2.4.2</version>&ndash;&gt;-->
+    <!--                <configuration>-->
+    <!--&lt;!&ndash;                    <excludeDevtools>false</excludeDevtools>&ndash;&gt;-->
+    <!--&lt;!&ndash;                    <classifier>${repackage.classifier}</classifier>&ndash;&gt;-->
+    <!--&lt;!&ndash;                    <image>&ndash;&gt;-->
+    <!--&lt;!&ndash;                        <builder>paketobuildpacks/builder:tiny</builder>&ndash;&gt;-->
+    <!--&lt;!&ndash;                        <env>&ndash;&gt;-->
+    <!--&lt;!&ndash;                            <BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>&ndash;&gt;-->
+    <!--&lt;!&ndash;                        </env>&ndash;&gt;-->
+    <!--&lt;!&ndash;                    </image>&ndash;&gt;-->
+    <!--                </configuration>-->
+    <!--            </plugin>-->
+    <!--&lt;!&ndash;            <plugin>&ndash;&gt;-->
+    <!--&lt;!&ndash;                <groupId>org.springframework.experimental</groupId>&ndash;&gt;-->
+    <!--&lt;!&ndash;                <artifactId>spring-aot-maven-plugin</artifactId>&ndash;&gt;-->
+    <!--&lt;!&ndash;                <version>${spring-native.version}</version>&ndash;&gt;-->
+    <!--&lt;!&ndash;                <executions>&ndash;&gt;-->
+    <!--&lt;!&ndash;                    <execution>&ndash;&gt;-->
+    <!--&lt;!&ndash;                        <id>test-generate</id>&ndash;&gt;-->
+    <!--&lt;!&ndash;                        <goals>&ndash;&gt;-->
+    <!--&lt;!&ndash;                            <goal>test-generate</goal>&ndash;&gt;-->
+    <!--&lt;!&ndash;                        </goals>&ndash;&gt;-->
+    <!--&lt;!&ndash;                    </execution>&ndash;&gt;-->
+    <!--&lt;!&ndash;                    <execution>&ndash;&gt;-->
+    <!--&lt;!&ndash;                        <id>generate</id>&ndash;&gt;-->
+    <!--&lt;!&ndash;                        <goals>&ndash;&gt;-->
+    <!--&lt;!&ndash;                            <goal>generate</goal>&ndash;&gt;-->
+    <!--&lt;!&ndash;                        </goals>&ndash;&gt;-->
+    <!--&lt;!&ndash;                    </execution>&ndash;&gt;-->
+    <!--&lt;!&ndash;                </executions>&ndash;&gt;-->
+    <!--&lt;!&ndash;            </plugin>&ndash;&gt;-->
+    <!--        </plugins>-->
+    <!--    </build>-->
+    <!--    <repositories>-->
+    <!--        <repository>-->
+    <!--            <id>spring-releases</id>-->
+    <!--            <name>Spring Releases</name>-->
+    <!--            <url>https://repo.spring.io/release</url>-->
+    <!--            <snapshots>-->
+    <!--                <enabled>false</enabled>-->
+    <!--            </snapshots>-->
+    <!--        </repository>-->
+    <!--    </repositories>-->
+    <!--    <pluginRepositories>-->
+    <!--        <pluginRepository>-->
+    <!--            <id>spring-releases</id>-->
+    <!--            <name>Spring Releases</name>-->
+    <!--            <url>https://repo.spring.io/release</url>-->
+    <!--            <snapshots>-->
+    <!--                <enabled>false</enabled>-->
+    <!--            </snapshots>-->
+    <!--        </pluginRepository>-->
+    <!--    </pluginRepositories>-->
+    <!--    <profiles>-->
+    <!--        <profile>-->
+    <!--            <id>native</id>-->
+    <!--            <properties>-->
+    <!--                <repackage.classifier>exec</repackage.classifier>-->
+    <!--                <native-buildtools.version>0.9.8</native-buildtools.version>-->
+    <!--            </properties>-->
+    <!--            <dependencies>-->
+    <!--                <dependency>-->
+    <!--                    <groupId>org.junit.platform</groupId>-->
+    <!--                    <artifactId>junit-platform-launcher</artifactId>-->
+    <!--                    <scope>test</scope>-->
+    <!--                </dependency>-->
+    <!--            </dependencies>-->
+    <!--            <build>-->
+    <!--                <plugins>-->
+    <!--&lt;!&ndash;                    <plugin>&ndash;&gt;-->
+    <!--&lt;!&ndash;                        <groupId>org.graalvm.buildtools</groupId>&ndash;&gt;-->
+    <!--&lt;!&ndash;                        <artifactId>native-maven-plugin</artifactId>&ndash;&gt;-->
+    <!--&lt;!&ndash;                        <version>${native-buildtools.version}</version>&ndash;&gt;-->
+    <!--&lt;!&ndash;                        <extensions>true</extensions>&ndash;&gt;-->
+    <!--&lt;!&ndash;                        <executions>&ndash;&gt;-->
+    <!--&lt;!&ndash;                            <execution>&ndash;&gt;-->
+    <!--&lt;!&ndash;                                <id>test-native</id>&ndash;&gt;-->
+    <!--&lt;!&ndash;                                <phase>test</phase>&ndash;&gt;-->
+    <!--&lt;!&ndash;                                <goals>&ndash;&gt;-->
+    <!--&lt;!&ndash;                                    <goal>test</goal>&ndash;&gt;-->
+    <!--&lt;!&ndash;                                </goals>&ndash;&gt;-->
+    <!--&lt;!&ndash;                            </execution>&ndash;&gt;-->
+    <!--&lt;!&ndash;                            <execution>&ndash;&gt;-->
+    <!--&lt;!&ndash;                                <id>build-native</id>&ndash;&gt;-->
+    <!--&lt;!&ndash;                                <phase>package</phase>&ndash;&gt;-->
+    <!--&lt;!&ndash;                                <goals>&ndash;&gt;-->
+    <!--&lt;!&ndash;                                    <goal>build</goal>&ndash;&gt;-->
+    <!--&lt;!&ndash;                                </goals>&ndash;&gt;-->
+    <!--&lt;!&ndash;                            </execution>&ndash;&gt;-->
+    <!--&lt;!&ndash;                        </executions>&ndash;&gt;-->
+    <!--&lt;!&ndash;                    </plugin>&ndash;&gt;-->
+    <!--                </plugins>-->
+    <!--            </build>-->
+    <!--        </profile>-->
+    <!--    </profiles>-->
 
 </project>
