@@ -28,3 +28,7 @@ function submit() {
     document.getElementById('userform').submit();
     return false;
 }
+//
+// function goToLoginPage(){
+//     location.href="/login"
+// }

@@ -206,8 +206,9 @@
             </li>
 
             <li sec:authorize="isAnonymous()" class="nav-item dropdown no-arrow">
-                <a class="nav-link dropdown-toggle" href="#" role="button"
-                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<!--                <a class="nav-link dropdown-toggle" href="#" role="button" onclick="goToLoginPage()"-->
+<!--                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+                <a class="nav-link dropdown-toggle" href="/login">
                     <span class="mr-2 d-none d-lg-inline text-gray-600 small">Please Login!</span>
                 </a>
             </li>
@@ -215,7 +216,5 @@
         </ul>
 
     </nav>
-
-
 </th:block>
 </html>
