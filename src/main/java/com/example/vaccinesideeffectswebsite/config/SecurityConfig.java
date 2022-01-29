@@ -45,5 +45,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 			.loginPage("/login")
 			.userInfoEndpoint()
 			.userService(principalOauth2UserService);
+
+		http.logout() // 로그아웃 처리
+				.logoutUrl("/logout") // 로그아웃 처리 URL
+				.logoutSuccessUrl("/index") // 로그아웃 성공 후 이동 URL
+                .invalidateHttpSession(true) // 로그아웃 이후 세션 전체 삭제 여부
+				.deleteCookies("JSESSIONID"); // 로그아웃 후 쿠키 삭제
 	}
 }
