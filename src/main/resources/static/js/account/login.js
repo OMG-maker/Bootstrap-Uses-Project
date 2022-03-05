@@ -3,7 +3,6 @@ $(function () {
 
 });
 
-// let email = $("#exampleInputEmail");
 let name = $("#exampleInputEmail");
 let password = $("#exampleInputPassword");
 
@@ -13,9 +12,8 @@ function fLogin() {
         url: "/loginProc",
         type: "POST",
         data: {
-            // userEmail: email.val(),
-            username: name.val(),
-            // userPassword: password.val()
+            // username: name.val(),
+            userEmail: name.val(),
             password: password.val()
         },
         success: function (result) {
