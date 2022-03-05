@@ -36,7 +36,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		.and()
 			.formLogin()
 			.loginPage("/login")
-//				.usernameParameter("username2") // 해당 코드를 사용하면 PrincipalDetailsService 에서 username 이 아닌 username2 를 사용해야한다.
+			.usernameParameter("userEmail") // 해당 코드를 사용하면 PrincipalDetailsService 에서 username 이 아닌 username2 를 사용해야한다.
 			.loginProcessingUrl("/loginProc") // loginProc 주소가 호출이 되면 시큐리틱 낚아채서 대신 로그인을 진행함
 			.defaultSuccessUrl("/index") // 성공했을때 이동하는 페이지
 

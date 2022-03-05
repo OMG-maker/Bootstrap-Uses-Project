@@ -20,8 +20,10 @@ public class PrincipalDetailsService implements UserDetailsService{
 
 	// 시큐리티 session(내부 Authentication(내부 UserDetails))
 	@Override
-	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		User user = userRepository.findByUsername(username);
+//	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+	public UserDetails loadUserByUsername(String userEmail) throws UsernameNotFoundException {
+//		User user = userRepository.findByUsername(username);
+		User user = userRepository.findByEmail(userEmail);
 		if(user == null) {
 			return null;
 		}else {
